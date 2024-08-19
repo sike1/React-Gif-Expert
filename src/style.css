@@ -65,3 +65,26 @@ h3 {
 ul{
   list-style: none;
 }
+
+
+.buttonClass {
+  font-size:15px;
+  font-family:Arial;
+  width:112px;
+  height:35px;
+  border-width:1px;
+  color:#fff;
+  border-color:#d02718;
+  font-weight:bold;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
+  border-bottom-left-radius:18px;
+  border-bottom-right-radius:18px;
+  text-shadow: 0px 1px 0px #810e05;
+  background:linear-gradient(#c62d1f, #f24437);
+}
+
+.buttonClass:hover {
+  background: linear-gradient(#f24437, #c62d1f);
+}
+              

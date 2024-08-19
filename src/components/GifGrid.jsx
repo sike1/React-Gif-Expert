@@ -7,17 +7,17 @@ export const GifGrid = ({ category }) => {
 
     const { gifs, isLoading } = useFechGifs(category)
 
-
     return (
         <>
             <h3>{category}</h3>
+
             {
                 isLoading && <div>Cargando...</div>
             }
             <div className="card-grid">
 
                 {
-                    gifs.map((gif) =>
+                    gifs.map((gif, i) =>
                     (
                         <GifItem key={gif.id} {...gif} />
                     )

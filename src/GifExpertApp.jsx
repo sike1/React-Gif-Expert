@@ -10,6 +10,10 @@ export const GifExpertApp = () => {
         setCategories([newCategory, ...categories])
     }
 
+    const onDelete = (category) => {
+        const neWCategories = categories.filter(cat => cat != category)
+        setCategories(neWCategories)
+    }
 
     return (
         <>
@@ -21,8 +25,10 @@ export const GifExpertApp = () => {
 
             {
                 categories.map(category =>
-                (
+                (<>
                     <GifGrid key={category} category={category} />
+                    <button key={category + "b"} className="buttonClass" onClick={() => onDelete(category)}>Eliminar</button>
+                </>
                 )
                 )
             }
