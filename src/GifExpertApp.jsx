@@ -25,10 +25,10 @@ export const GifExpertApp = () => {
 
             {
                 categories.map(category =>
-                (<>
+                (<div key={category + "d"}>
                     <GifGrid key={category} category={category} />
                     <button key={category + "b"} className="buttonClass" onClick={() => onDelete(category)}>Eliminar</button>
-                </>
+                </div>
                 )
                 )
             }
